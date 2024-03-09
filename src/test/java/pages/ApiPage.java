@@ -40,22 +40,17 @@ public class ApiPage {
 //        System.out.println(res.getBody().asString());
     }
     public void validationResponseBodyGetListUsers() {
-
-        List<Object> id = res.jsonPath().getList("id");
-//        List<Object> title = res.jsonPath().getList("title");
-//        List<Object> firstName = res.jsonPath().getList("firstName");
-//        List<Object> lastName = res.jsonPath().getList("lastName");
-//        List<Object> gender = res.jsonPath().getList("gender");
-//        List<Object> email = res.jsonPath().getList("email");
-
-        System.out.println(id.get(0));
-
-        AssertionsForClassTypes.assertThat(id.get(0)).isNotNull();
-//        AssertionsForClassTypes.assertThat(title.get(0)).isIn("mr", "ms", "mrs", "miss", "dr", "");
-//        AssertionsForClassTypes.assertThat(firstName.get(0)).isNotNull();
-//        AssertionsForClassTypes.assertThat(lastName.get(0)).isNotNull();
-//        AssertionsForClassTypes.assertThat(gender.get(0)).isIn("male", "female", "other", "");
-//        AssertionsForClassTypes.assertThat(email.get(0)).isNotNull();
+        System.out.println(res.getBody().asString());
+        String Id = res.jsonPath().getString("data[0].id");
+        String Title = res.jsonPath().getString("data[0].title");
+        String firstName = res.jsonPath().getString("data[0].firstName");
+        String lastName = res.jsonPath().getString("data[0].lastName");
+        String picture = res.jsonPath().getString("data[0].picture");
+        assertThat(Id).isNotNull();
+        assertThat(Title).isNotNull();
+        assertThat(firstName).isNotNull();
+        assertThat(lastName).isNotNull();
+        assertThat(picture).isNotNull();
     }
     public void validationResponseJsonWithJSONSchema(String filename){
         File JSONFile = Utility.getJSONSchemaFile(filename);
