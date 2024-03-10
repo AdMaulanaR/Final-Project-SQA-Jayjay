@@ -34,4 +34,24 @@ public class ApiStep {
     public void validationResponseJsonWithJSONSchema(String fileName) {
         apiPage.validationResponseJsonWithJSONSchema(fileName);
     }
+
+    @And("hit api get user by id")
+    public void hitApiGetUserById() {
+        apiPage.hitApiGetUserById();
+    }
+
+    @Then("validation response body user")
+    public void validationResponseBodyUser() {
+        apiPage.validationResponseBodyUser();
+    }
+
+    @And("hit api get user wrong id")
+    public void hitApiGetUserWrongId() {
+        apiPage.hitApiGetUserWrongId();
+    }
+
+    @And("hit api get post create new user")
+    public void hitApiGetPostCreateNewUser() {
+        apiPage.hitApiGetPostCreateNewUser();
+    }
 }

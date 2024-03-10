@@ -1,6 +1,7 @@
 package helper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,5 +31,12 @@ public class Utility {
 
     public static File getJSONSchemaFile(String JSONFile) {
         return new File("src/test/java/helper/JSONSchemas/" + JSONFile);
+    }
+    public static String generateRandomEmail(){
+        String allowedChart = "abcdefghijklmnopqrstuvwxyz" + "123456789" + "_-.";
+        String email = "";
+        String temp = RandomStringUtils.randomAlphanumeric(10);
+        email = temp + "@example.com";
+        return email;
     }
 }
