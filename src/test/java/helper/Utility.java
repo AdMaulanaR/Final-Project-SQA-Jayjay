@@ -39,4 +39,5 @@ public class Utility {
         email = temp + "@example.com";
         return email;
     }
+
 }

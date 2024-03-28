@@ -5,12 +5,11 @@ import helper.Utility;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import java.io.File;
-import static helper.Models.getListUsers;
-import static helper.Models.postCreateNewData;
+import static helper.Models.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ApiPage {
-    String setUrl;
+    String setUrl, global_id;
     Response res;
     public void prepareUrlFor(String url){
         switch (url) {
@@ -38,7 +37,7 @@ public class ApiPage {
 //        System.out.println(res.getBody().asString());
     }
     public void validationResponseBodyGetListUsers() {
-//        System.out.println(res.getBody().asString());
+
         String Id = res.jsonPath().getString("data[0].id");
         String Title = res.jsonPath().getString("data[0].title");
         String firstName = res.jsonPath().getString("data[0].firstName");
@@ -49,6 +48,7 @@ public class ApiPage {
         assertThat(firstName).isNotNull();
         assertThat(lastName).isNotNull();
         assertThat(picture).isNotNull();
+
     }
     public void validationResponseJsonWithJSONSchema(String filename){
         File JSONFile = Utility.getJSONSchemaFile(filename);
@@ -59,6 +59,7 @@ public class ApiPage {
 //        System.out.println(res.getBody().asString());
     }
     public void validationResponseBodyUser(){
+
         String Id = res.jsonPath().getString("id");
         String Title = res.jsonPath().getString("title");
         String firstName = res.jsonPath().getString("firstName");
@@ -69,6 +70,8 @@ public class ApiPage {
         assertThat(firstName).isNotNull();
         assertThat(lastName).isNotNull();
         assertThat(picture).isNotNull();
+
+        global_id = Id;
     }
     public void hitApiGetUserWrongId(){
         res = getListUsers(setUrl);
@@ -77,5 +80,7 @@ public class ApiPage {
         res = postCreateNewData(setUrl);
         System.out.println(res.getBody().asString());
     }
-
+    public void hitApiDeleteUser(){
+        res = deleteUser(setUrl, global_id);
+    }
 }
