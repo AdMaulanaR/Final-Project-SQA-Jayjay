@@ -20,7 +20,6 @@ public class Models {
         return request.when().get(endpoint);
     }
     public static Response postCreateNewData(String endpoint){
-//        System.out.println(endpoint);
 
         String firstName = "AdMaulana";
         String lastName = "Rahman";
@@ -36,14 +35,17 @@ public class Models {
         setUpHeaders();
         return request.body(payload.toString()).when().post(endpoint);
     }
-    public static Response deleteUser(String endpoint, String user_id){
+//    public static Response deleteUser(String endpoint, String user_id){
+//        setUpHeaders();
+//        String finalEndpoint = endpoint + "user" + "/" + user_id;
+//        System.out.println(finalEndpoint);
+//        return request.when().delete(finalEndpoint);
+//    }
+
+
+    public static Response deleteUser(){
         setUpHeaders();
-        String finalEndpoint = endpoint + "user" + "/" + user_id;
-        return request.when().delete(finalEndpoint);
+        return request.when().delete("https://dummyapi.io/data/v1/user/660563f482cf2daaa6e47c85");
     }
 
-//    public static Response deleteUser(){
-//        setUpHeaders();
-//        return request.when().delete("https://dummyapi.io/data/v1/user/6604e7ed82cf2d13cae3747f");
-//    }
 }

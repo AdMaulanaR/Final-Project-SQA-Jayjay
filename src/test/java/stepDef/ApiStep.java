@@ -54,6 +54,7 @@ public class ApiStep {
     public void hitApiGetPostCreateNewUser() {
         apiPage.hitApiGetPostCreateNewUser();
     }
+
     @And("hit api delete user")
     public void hitApiDeleteUser() {
         apiPage.hitApiDeleteUser();

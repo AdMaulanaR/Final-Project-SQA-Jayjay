@@ -1,7 +1,7 @@
 Feature: Test Automation API https://dummyapi.io/
 
   @api
-  Scenario: Test get list data normal
+  Scenario: Test get list data normal TC-01
     Given prepare url for "GET_LIST_USERS"
     And hit api get list users
     Then validation status code is equals to 200
@@ -29,11 +29,12 @@ Feature: Test Automation API https://dummyapi.io/
     Then validation status code is equals to 200
     Then validation response json with JSONSchema "post_create_new_user.json"
 
-#  @api
-#  Scenario: Test delete new user
-#    Given prepare url for "GET_POST_CREATE_NEW_USER"
-#    And hit api get post create new user
-#    Then validation status code is equals to 200
-#    Then validation response json with JSONSchema "post_create_new_user.json"
-#    And hit api delete user
-#    Then validation status code is equals to 200
+
+  @api
+  Scenario: Test delete new user
+    Given prepare url for "GET_POST_CREATE_NEW_USER"
+    And hit api get post create new user
+    Then validation status code is equals to 200
+    Then validation response json with JSONSchema "post_create_new_user.json"
+    And hit api delete user
+    Then validation status code is equals to 200

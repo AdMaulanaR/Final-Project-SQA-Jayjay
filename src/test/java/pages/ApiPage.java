@@ -38,13 +38,13 @@ public class ApiPage {
     }
     public void validationResponseBodyGetListUsers() {
 
-        String Id = res.jsonPath().getString("data[0].id");
-        String Title = res.jsonPath().getString("data[0].title");
-        String firstName = res.jsonPath().getString("data[0].firstName");
-        String lastName = res.jsonPath().getString("data[0].lastName");
-        String picture = res.jsonPath().getString("data[0].picture");
-        assertThat(Id).isNotNull();
-        assertThat(Title).isNotNull();
+        String id = res.jsonPath().getString("data[10].id");
+        String title = res.jsonPath().getString("data[10].title");
+        String firstName = res.jsonPath().getString("data[10].firstName");
+        String lastName = res.jsonPath().getString("data[10].lastName");
+        String picture = res.jsonPath().getString("data[10].picture");
+        assertThat(id).isNotNull();
+        assertThat(title).isNotNull();
         assertThat(firstName).isNotNull();
         assertThat(lastName).isNotNull();
         assertThat(picture).isNotNull();
@@ -60,27 +60,26 @@ public class ApiPage {
     }
     public void validationResponseBodyUser(){
 
-        String Id = res.jsonPath().getString("id");
-        String Title = res.jsonPath().getString("title");
+        String id = res.jsonPath().getString("id");
+        String title = res.jsonPath().getString("title");
         String firstName = res.jsonPath().getString("firstName");
         String lastName = res.jsonPath().getString("lastName");
         String picture = res.jsonPath().getString("picture");
-        assertThat(Id).isNotNull();
-        assertThat(Title).isNotNull();
+        assertThat(id).isNotNull();
+        assertThat(title).isNotNull();
         assertThat(firstName).isNotNull();
         assertThat(lastName).isNotNull();
         assertThat(picture).isNotNull();
 
-        global_id = Id;
     }
     public void hitApiGetUserWrongId(){
         res = getListUsers(setUrl);
     }
     public void hitApiGetPostCreateNewUser(){
         res = postCreateNewData(setUrl);
-        System.out.println(res.getBody().asString());
+//        System.out.println(res.getBody().asString());
     }
     public void hitApiDeleteUser(){
-        res = deleteUser(setUrl, global_id);
+        res = deleteUser();
     }
 }
