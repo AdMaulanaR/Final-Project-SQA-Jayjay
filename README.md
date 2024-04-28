@@ -1,7 +1,7 @@
 Final Project Software Quality Assurance Engineer in Jayjay School
 - Make API and Web UI Automation
 - Test API Automatin : https://dummyapi.io/
-- Test Web UI Automation : https://www.demoblaze.com/
+- Test Web UI Automation : https://www.saucedemo.com/
 - Test Cases API and Web use Gherkin format, and use Cucumber as a library for implementation
 - Gradle Task fungtion @api and @web
 - GitHub Action Workflow
