@@ -122,5 +122,16 @@ Feature: Test Automation Web www.saucedemo.com
     And user click btn continue
     Then user able to see error message "Error: First Name is required"
 
+  @web
+  Scenario: Click Home in login page
+    Given user is on login page
+    And user input user name "standard_user"
+    And user input password "secret_sauce"
+    And user click button login
+    And user click btn burger menu
+    And user click btn about
+    Then user will directed to the sauce labs page
+
+
 
 

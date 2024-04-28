@@ -128,4 +128,20 @@ public class WebStep {
     public void userClickBtnContinueShopping() {
         webPage.clickContinueShopp();
     }
+
+
+    @And("user click btn burger menu")
+    public void userClickBtnBurgerMenu() {
+        webPage.clickBtnBurgerMenu();
+    }
+
+    @And("user click btn about")
+    public void userClickBtnAbout() {
+        webPage.clickBtnAbout();
+    }
+
+    @Then("user will directed to the sauce labs page")
+    public void userWillDirectedToTheSauceLabsPage() {
+        webPage.sauceLabsPage();
+    }
 }

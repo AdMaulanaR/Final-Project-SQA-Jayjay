@@ -34,6 +34,9 @@ public class WebPage {
     By assert_your_info_page = By.xpath("//*[text()='Checkout: Your Information']");
     By btn_cancel = By.id("cancel");
     By btn_continue_shopping = By.id("continue-shopping");
+    By btn_burger_menu = By.id("react-burger-menu-btn");
+    By btn_about = By.id("about_sidebar_link");
+    By sauce_labs_page = By.xpath("//*[text()='Sauce Labs Platform for Test']");
 
 
     public void isOnLoginPage(){
@@ -119,4 +122,16 @@ public class WebPage {
     public void clickContinueShopp(){
         driver.findElement(btn_continue_shopping).click();
     }
+    public void clickBtnBurgerMenu(){
+        driver.findElement(btn_burger_menu).click();
+    }
+    public void clickBtnAbout(){
+        driver.findElement(btn_about).click();
+    }
+    public void sauceLabsPage(){
+        driver.findElement(sauce_labs_page);
+        WebElement yourInfo = driver.findElement(sauce_labs_page);
+        assertTrue(yourInfo.isDisplayed());
+    }
+
 }
