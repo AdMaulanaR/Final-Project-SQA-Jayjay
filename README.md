@@ -22,8 +22,11 @@ Tools
 
 
 RESULT TEST
+![image](https://github.com/AdMaulanaR/Final-Project-SQA-Jayjay/assets/142900841/77872475-1433-47e5-a019-bab355edd8d8)
+
 
 ![image](https://github.com/AdMaulanaR/Final-Project-SQA-Jayjay/assets/142900841/fbbc3444-486e-492a-ad81-0bb2e315ab26)
+
 
 ![image](https://github.com/AdMaulanaR/Final-Project-SQA-Jayjay/assets/142900841/22352571-29a7-47a2-a3a5-bd22d099dc75)
 
