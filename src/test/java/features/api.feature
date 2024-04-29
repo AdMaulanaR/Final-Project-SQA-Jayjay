@@ -29,12 +29,26 @@ Feature: Test Automation API https://dummyapi.io/
     Then validation status code is equals to 200
     Then validation response json with JSONSchema "post_create_new_user.json"
 
+  @api
+  Scenario: Test create new user with minimum criteria firstName, lastName, and Email
+  Given prepare url for "GET_POST_CREATE_NEW_USER"
+  And hit api get post create new min
+  Then validation status code is equals to 200
+  Then validation response body user min
+  
+  @api
+  Scenario: Test create new user without email
+  Given prepare url for "GET_POST_CREATE_NEW_USER"
+  And hit api post create new user without email
+  Then validation status code is equals to 400
 
-#  @api
-#  Scenario: Test delete new user
-#    Given prepare url for "GET_POST_CREATE_NEW_USER"
-#    And hit api get post create new user
-#    Then validation status code is equals to 200
-#    Then validation response json with JSONSchema "post_create_new_user.json"
-#    And hit api delete user
-#    Then validation status code is equals to 200
+
+  @api
+  Scenario: Test delete new user
+    Given prepare url for "GET_POST_CREATE_NEW_USER"
+    And hit api get post create new user
+    Then validation status code is equals to 200
+    And validation response body user
+    Then validation response json with JSONSchema "post_create_new_user.json"
+    And hit api delete user
+    Then validation status code is equals to 200

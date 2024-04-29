@@ -132,6 +132,6 @@ public class WebPage {
         driver.findElement(sauce_labs_page);
         WebElement yourInfo = driver.findElement(sauce_labs_page);
         assertTrue(yourInfo.isDisplayed());
+        System.out.println(yourInfo);
     }
-
 }

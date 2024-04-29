@@ -1,6 +1,7 @@
 package helper;
 
 
+import org.bouncycastle.pqc.crypto.util.PQCOtherInfoGenerator;
 
 public class Endpoint {
     public static final String host_dummy = "https://dummyapi.io/data/v1/";
@@ -8,5 +9,6 @@ public class Endpoint {
     public static final String GET_USER_BY_ID = host_dummy + "user/60d0fe4f5311236168a109cd";
     public static final String GET_USER_WRONG_ID = host_dummy + "user/12345testwrongid";
     public static final String GET_POST_CREATE_NEW_USER = host_dummy + "user/create";
+    public static final String DELETE_USER = host_dummy + "user/";
 
 }

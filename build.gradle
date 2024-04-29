@@ -71,3 +71,22 @@ tasks.register('webTest') {
         }
     }
 }
+
+task cucumber() {
+    description("Running Cucumber Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/cucumber.html',
+                    '--plugin', 'json:reports/cucumber.json',
+                    '--plugin', 'pretty',
+                    '--glue', 'stepDef',
+                    // '--tags', '@login and @home',
+                    'src/test/java/features'
+            ]
+        }
+    }
+}

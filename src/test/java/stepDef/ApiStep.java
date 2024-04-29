@@ -59,4 +59,19 @@ public class ApiStep {
     public void hitApiDeleteUser() {
         apiPage.hitApiDeleteUser();
     }
+
+    @And("hit api get post create new min")
+    public void hitApiGetPostCreateNewMin() {
+        apiPage.hitApiGetPostCreateNewMin();
+    }
+
+    @Then("validation response body user min")
+    public void validationResponseBodyUserMin() {
+        apiPage.validationResponseBodyUserMin();
+    }
+
+    @And("hit api post create new user without email")
+    public void hitApiPostCreateNewUserWithoutEmail() {
+        apiPage.hitApiPostCreateNewUserWithoutEmail();
+    }
 }
