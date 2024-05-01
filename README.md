@@ -1,4 +1,5 @@
-Final Project Software Quality Assurance Engineer in Jayjay School
+Automated Testing Framework API and UI Web With Java
+
 - Make API and Web UI Automation
 - Test API Automatin : https://dummyapi.io/
 - Test Web UI Automation : https://www.saucedemo.com/
