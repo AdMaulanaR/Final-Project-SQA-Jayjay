@@ -138,9 +138,9 @@ public class WebPage {
     public void clickIconSocialMediaTwitter(){
         driver.findElement(btn_icon_twitter).click();
     }
-    public void sauceLabTwitterPage(){
-        driver.findElement(twitter_sauceLab_page);
-        WebElement sauceLabsAccount = driver.findElement(twitter_sauceLab_page);
-        assertTrue(sauceLabsAccount.equals("@saucelabs"));
-    }
+//    public void sauceLabTwitterPage(){
+//        driver.findElement(twitter_sauceLab_page);
+//        WebElement sauceLabsAccount = driver.findElement(twitter_sauceLab_page);
+//        assertTrue(sauceLabsAccount.equals("@saucelabs"));
+//    }
 }

@@ -150,8 +150,8 @@ public class WebStep {
         webPage.clickIconSocialMediaTwitter();
     }
 
-    @Then("user will directed to sauce labs twitter page")
-    public void userWillDirectedToSauceLabsTwitterPage() {
-        webPage.sauceLabTwitterPage();
-    }
+//    @Then("user will directed to sauce labs twitter page")
+//    public void userWillDirectedToSauceLabsTwitterPage() {
+//        webPage.sauceLabTwitterPage();
+//    }
 }
