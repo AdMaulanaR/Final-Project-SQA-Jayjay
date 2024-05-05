@@ -37,6 +37,8 @@ public class WebPage {
     By btn_burger_menu = By.id("react-burger-menu-btn");
     By btn_about = By.id("about_sidebar_link");
     By sauce_labs_page = By.xpath("//*[text()='Sauce Labs Platform for Test']");
+    By btn_icon_twitter = By.xpath("//*[text()=\"Twitter\"]");
+    By twitter_sauceLab_page = By.xpath("(//span[@style='text-overflow: unset;'])[23]");
 
 
     public void isOnLoginPage(){
@@ -132,6 +134,13 @@ public class WebPage {
         driver.findElement(sauce_labs_page);
         WebElement yourInfo = driver.findElement(sauce_labs_page);
         assertTrue(yourInfo.isDisplayed());
-        System.out.println(yourInfo);
+    }
+    public void clickIconSocialMediaTwitter(){
+        driver.findElement(btn_icon_twitter).click();
+    }
+    public void sauceLabTwitterPage(){
+        driver.findElement(twitter_sauceLab_page);
+        WebElement sauceLabsAccount = driver.findElement(twitter_sauceLab_page);
+        assertTrue(sauceLabsAccount.equals("@saucelabs"));
     }
 }

@@ -123,7 +123,7 @@ Feature: Test Automation Web www.saucedemo.com
     Then user able to see error message "Error: First Name is required"
 
   @web
-  Scenario: Click Home in login page
+  Scenario: Click Home in login page(TC-11)
     Given user is on login page
     And user input user name "standard_user"
     And user input password "secret_sauce"
@@ -131,6 +131,15 @@ Feature: Test Automation Web www.saucedemo.com
     And user click btn burger menu
     And user click btn about
     Then user will directed to the sauce labs page
+
+  @web
+  Scenario: Click Home in login page(TC-12)
+    Given user is on login page
+    And user input user name "standard_user"
+    And user input password "secret_sauce"
+    And user click button login
+    And user click icon social media twitter
+#    Then user will directed to sauce labs twitter page
 
 
 

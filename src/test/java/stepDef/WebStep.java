@@ -144,4 +144,14 @@ public class WebStep {
     public void userWillDirectedToTheSauceLabsPage() {
         webPage.sauceLabsPage();
     }
+
+    @And("user click icon social media twitter")
+    public void userClickIconSocialMediaTwitter() {
+        webPage.clickIconSocialMediaTwitter();
+    }
+
+    @Then("user will directed to sauce labs twitter page")
+    public void userWillDirectedToSauceLabsTwitterPage() {
+        webPage.sauceLabTwitterPage();
+    }
 }
