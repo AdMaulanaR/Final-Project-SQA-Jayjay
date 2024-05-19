@@ -133,13 +133,22 @@ Feature: Test Automation Web www.saucedemo.com
     Then user will directed to the sauce labs page
 
   @web
-  Scenario: Click Home in login page(TC-12)
+  Scenario: Click twitter in login page(TC-12)
     Given user is on login page
     And user input user name "standard_user"
     And user input password "secret_sauce"
     And user click button login
     And user click icon social media twitter
 #    Then user will directed to sauce labs twitter page
+
+  @web
+  Scenario: Click facebook in login page(TC-13)
+    Given user is on login page
+    And user input user name "standard_user"
+    And user input password "secret_sauce"
+    And user click button login
+    And user click icon social media facebook
+#    Then user will directed to sauce labs facebook page
 
 
 

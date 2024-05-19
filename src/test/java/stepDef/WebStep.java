@@ -150,6 +150,16 @@ public class WebStep {
         webPage.clickIconSocialMediaTwitter();
     }
 
+    @And("user click icon social media facebook")
+    public void userClickIconSocialMediaFacebook() {
+        webPage.clickIconSocialMediaFacebook();
+    }
+
+//    @Then("user will directed to sauce labs facebook page")
+//    public void userWillDirectedToSauceLabsFacebookPage() {
+//        webPage.sauceLabFacebookPage();
+//    }
+
 //    @Then("user will directed to sauce labs twitter page")
 //    public void userWillDirectedToSauceLabsTwitterPage() {
 //        webPage.sauceLabTwitterPage();

@@ -36,10 +36,12 @@ public class WebPage {
     By btn_continue_shopping = By.id("continue-shopping");
     By btn_burger_menu = By.id("react-burger-menu-btn");
     By btn_about = By.id("about_sidebar_link");
-    By sauce_labs_page = By.xpath("//*[text()='Sauce Labs Platform for Test']");
+    By sauce_labs_page = By.xpath("//h3[text()='Sauce Labs Platform for Test']");
     By btn_icon_twitter = By.xpath("//*[text()=\"Twitter\"]");
-    By twitter_sauceLab_page = By.xpath("(//span[@style='text-overflow: unset;'])[23]");
-
+    By twitter_sauceLab_page = By.xpath("//span[@class='css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3'][@style='text-overflow: unset;'][@xpath='10']");
+    By btn_icon_facebook = By.xpath("//*[text()=\"Facebook\"]");
+    By btn_close_popup_fb = By.xpath("//div[@aria-label='Tutup']");
+    By assert_facebook_page = By.xpath("//h1[@class='html-h1 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1vvkbs x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz']");
 
     public void isOnLoginPage(){
         driver.get("https://www.saucedemo.com/");
@@ -138,9 +140,20 @@ public class WebPage {
     public void clickIconSocialMediaTwitter(){
         driver.findElement(btn_icon_twitter).click();
     }
+    public void clickIconSocialMediaFacebook(){
+        driver.findElement(btn_icon_facebook).click();
+    }
+//    public void sauceLabFacebookPage(){
+//        driver.findElement(btn_close_popup_fb).click();
+//        driver.findElement(assert_facebook_page);
+//        WebElement sauceLabsFbAcc = driver.findElement(assert_facebook_page);
+//        assertTrue(sauceLabsFbAcc.isDisplayed());
+//        System.out.println(sauceLabsFbAcc);
+//    }
 //    public void sauceLabTwitterPage(){
 //        driver.findElement(twitter_sauceLab_page);
 //        WebElement sauceLabsAccount = driver.findElement(twitter_sauceLab_page);
-//        assertTrue(sauceLabsAccount.equals("@saucelabs"));
+//        assertTrue(sauceLabsAccount.isDisplayed());
+//        System.out.println(sauceLabsAccount);
 //    }
 }
