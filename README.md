@@ -76,3 +76,4 @@ Developed API automated test framework, Web UI automated test framework and CI/C
 
 ![image](https://github.com/AdMaulanaR/Final-Project-SQA-Jayjay/assets/142900841/22352571-29a7-47a2-a3a5-bd22d099dc75)
 
+tes
